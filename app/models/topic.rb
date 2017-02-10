@@ -3,4 +3,5 @@ class Topic < ActiveRecord::Base
   friendly_id :title, use: :slugged
   validates_uniqueness_of :slug
   validates_presence_of :title, :slug
+  has_many :posts
 end
